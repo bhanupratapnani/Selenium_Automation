@@ -1,0 +1,19 @@
+package Base;
+
+import java.io.IOException;
+
+public class AllureReport {
+	
+	public static void openAllureReport()
+    {
+    		String command="cmd.exe /c allure serve allure-results";
+    		try {
+				Runtime.getRuntime().exec(command);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		
+    }
+
+}
