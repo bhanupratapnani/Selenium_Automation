@@ -91,7 +91,7 @@ public class Tables {
 		driver.close();
 	}
 
-	@AfterSuite(enabled = false)
+	@AfterSuite
 	public void Allurereport() {
 		AllureReport.openAllureReport();
 	}

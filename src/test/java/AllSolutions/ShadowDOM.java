@@ -56,7 +56,7 @@ public class ShadowDOM {
 		driver.close();
 	}
 
-	@AfterSuite(enabled = false)
+	@AfterSuite
 	public void Allurereport() {
 		AllureReport.openAllureReport();
 	}

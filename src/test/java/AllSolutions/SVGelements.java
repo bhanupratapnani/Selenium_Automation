@@ -49,7 +49,7 @@ public class SVGelements {
 		driver.close();
 	}
 
-	@AfterSuite(enabled = false)
+	@AfterSuite
 	public void Allurereport() {
 		AllureReport.openAllureReport();
 	}

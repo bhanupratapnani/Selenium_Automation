@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-02T11:24:19 IST" name="Default suite" finished-at="2025-06-02T11:24:25 IST" duration-ms="5500">
+  <suite started-at="2025-06-03T11:47:58 IST" name="Default suite" finished-at="2025-06-03T11:48:03 IST" duration-ms="5144">
     <groups>
     </groups>
-    <test started-at="2025-06-02T11:24:19 IST" name="Default test" finished-at="2025-06-02T11:24:25 IST" duration-ms="5500">
-      <class name="AllSolutions.Selenium_Automation_Examples">
-        <test-method is-config="true" signature="Browser()[pri:0, instance:AllSolutions.Selenium_Automation_Examples@102cec62]" started-at="2025-06-02T11:24:19 IST" name="Browser" finished-at="2025-06-02T11:24:21 IST" duration-ms="1566" status="PASS">
+    <test started-at="2025-06-03T11:47:58 IST" name="Default test" finished-at="2025-06-03T11:48:03 IST" duration-ms="5144">
+      <class name="AllSolutions.DatePicker">
+        <test-method is-config="true" signature="Browser()[pri:0, instance:AllSolutions.DatePicker@3b5fad2d]" started-at="2025-06-03T11:47:58 IST" name="Browser" finished-at="2025-06-03T11:48:03 IST" duration-ms="4558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Browser -->
-        <test-method signature="DynamicTable()[pri:0, instance:AllSolutions.Selenium_Automation_Examples@102cec62]" started-at="2025-06-02T11:24:21 IST" name="DynamicTable" finished-at="2025-06-02T11:24:24 IST" duration-ms="3695" status="PASS">
+        <test-method signature="date3()[pri:0, instance:AllSolutions.DatePicker@3b5fad2d]" started-at="2025-06-03T11:48:03 IST" name="date3" finished-at="2025-06-03T11:48:03 IST" duration-ms="437" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DynamicTable -->
-        <test-method is-config="true" signature="close()[pri:0, instance:AllSolutions.Selenium_Automation_Examples@102cec62]" started-at="2025-06-02T11:24:24 IST" name="close" finished-at="2025-06-02T11:24:25 IST" duration-ms="98" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- AllSolutions.Selenium_Automation_Examples -->
+        </test-method> <!-- date3 -->
+      </class> <!-- AllSolutions.DatePicker -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

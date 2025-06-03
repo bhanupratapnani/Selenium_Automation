@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AllSolutions.Selenium_Automation_Examples">
+      <class name="AllSolutions.DatePicker">
         <methods>
           <include name="close"/>
-          <include name="StaticTable"/>
           <include name="Browser"/>
           <include name="Allurereport"/>
+          <include name="date2"/>
         </methods>
-      </class> <!-- AllSolutions.Selenium_Automation_Examples -->
+      </class> <!-- AllSolutions.DatePicker -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
