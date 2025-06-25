@@ -31,9 +31,10 @@ public class DropDown {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", ele);
 
-		// If the dropdown box in <div> tag we can get text by just simple List and
-		// foreach loop.
-		// Here this dropdown box mentioned in <div> tag.
+		/* If the dropdown box in <div> tag we can get text by just simple List and
+		   foreach loop.
+		   
+		   Here this dropdown box mentioned in <div> tag.*/
 		driver.findElement(By.id("comboBox")).click();
 
 		List<WebElement> options = driver.findElements(By.xpath("//div[@id='dropdown']/div[@class='option']"));
@@ -45,15 +46,15 @@ public class DropDown {
 	}
 
 	@Test
-	public void select() {
+	public void selectdropdown() {
 		WebElement ele = driver.findElement(By.id("country"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", ele);
 
-		/*
-		 * If the dropdown box in <select> tag we must use Select class And by using its
+		
+		/* If the dropdown box in <select> tag we must use Select class And by using its
 		 * methods we can get all the options in that dropdown.
-		 * 
+		 
 		 * here this dropdown mentioned in <select> tag
 		 */
 

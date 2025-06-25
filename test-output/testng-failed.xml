@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AllSolutions.DatePicker">
+      <class name="AllSolutions.Tables">
         <methods>
-          <include name="close"/>
+          <include name="DynamicPaginationTable"/>
           <include name="Browser"/>
+          <include name="close"/>
           <include name="Allurereport"/>
-          <include name="date2"/>
         </methods>
-      </class> <!-- AllSolutions.DatePicker -->
+      </class> <!-- AllSolutions.Tables -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

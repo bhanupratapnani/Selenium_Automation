@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -32,6 +33,8 @@ public class DatePicker {
 		WebElement date = driver.findElement(By.xpath("//input[@id='datepicker']"));
 		date.sendKeys("12/12/2012");
 		date.sendKeys(Keys.ENTER);
+		
+		driver.manage().logs().get(LogType.BROWSER).forEach(System.out::println);
 	}
 
 	@Test
@@ -62,7 +65,7 @@ public class DatePicker {
 		String datestarts = "2025-04-04";
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].value=arguments[1];", startdate, datestarts);
-
+		
 		// For End date.
 		WebElement enddate = driver.findElement(By.id("end-date"));
 		enddate.click();

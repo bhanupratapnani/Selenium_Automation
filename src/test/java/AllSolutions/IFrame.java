@@ -1,11 +1,8 @@
 package AllSolutions;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -14,41 +11,33 @@ import org.testng.annotations.Test;
 
 import Base.AllureReport;
 
-public class WindowHandling {
-	
+public class IFrame {
 	WebDriver driver;
 
 	@BeforeMethod
 	public void Browser() {
 		driver = new ChromeDriver();
-		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.get("https://practice.expandtesting.com/iframe");
 		driver.manage().window().maximize();
 	}
-
 	@Test
-	public void nextwindow() throws InterruptedException {
+	public void frame() 
+	{
+		//it will switch to iframe, in frame brackets we should mention id of the that iframe.
+		driver.switchTo().frame("mce_0_ifr");	
 		
-		driver.findElement(By.xpath("//button[text()='New Tab']")).click();
+		WebElement ele=driver.findElement(By.id("tinymce"));	//enters into frame
+		
+		ele.clear();
+		ele.sendKeys("Automation Testing");
+		
+		driver.switchTo().defaultContent();	//exit from frame
+		
+		WebElement ele2=driver.findElement(By.xpath("//*[h4]"));
 
-		String cw = driver.getWindowHandle();
-
-		Set<String> windows = driver.getWindowHandles();
-
-		List<String> list = new ArrayList<>(windows);
-
-		for (int i = 1; i < list.size(); i++) {
-
-			String nw = list.get(i);
-
-			driver.switchTo().window(nw);
-
-			Thread.sleep(3000);
-
-			System.out.println(cw);
-			System.out.println(nw);
-		}
+		System.out.println("footer: "+ele2.getText());
 	}
-
+	
 	@AfterMethod
 	public void close() {
 		driver.close();
@@ -57,6 +46,6 @@ public class WindowHandling {
 	@AfterSuite(enabled = false)
 	public void Allurereport() {
 		AllureReport.openAllureReport();
-	}
 
+	}
 }

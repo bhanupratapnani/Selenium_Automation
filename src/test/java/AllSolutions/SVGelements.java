@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import Base.AllureReport;
 
 public class SVGelements {
-
+	//Scale Vector Graphics
 	WebDriver driver;
 
 	@BeforeMethod
@@ -29,6 +29,8 @@ public class SVGelements {
 		WebElement svg = driver.findElement(By.xpath("//h2[text()='SVG Elements']"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", svg);
+
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//h2[text()='SVG Elements']")));
 
 		WebElement red = driver.findElement(By.xpath("//*[name()='circle' and @fill='red']"));
 		WebElement green = driver.findElement(By.xpath("//*[name()='rect' and @fill='green']"));

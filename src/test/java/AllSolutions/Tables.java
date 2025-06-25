@@ -66,7 +66,7 @@ public class Tables {
 		driver.get("https://testautomationpractice.blogspot.com/");
 
 		List<WebElement> rows;
-		List<WebElement> cells;
+		List<WebElement> cells = null;
 
 		int totalPages = driver.findElements(By.xpath("//ul[@id='pagination']/li/a")).size();
 
