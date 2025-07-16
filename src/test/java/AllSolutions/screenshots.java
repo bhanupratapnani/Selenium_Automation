@@ -18,7 +18,7 @@ import com.github.javafaker.Faker;
 
 import Base.AllureReport;
 
-public class Screenshots {
+public class screenshots {
 
 	WebDriver driver;
 
@@ -30,7 +30,7 @@ public class Screenshots {
 	}
 
 	@Test
-	public void screenshot() throws IOException {
+	public void screenshotByTime() throws IOException {
 
 		String name = LocalTime.now().toString().substring(9, 12);
 		System.out.println(name);
@@ -40,8 +40,9 @@ public class Screenshots {
 		File f = tk.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(f, new File("./screenshots/" +name+ ".png"));
 	}
+	
 	@Test
-	public void screenshot2() throws IOException 
+	public void screenshotByFaker() throws IOException 
 	{
 		Faker fa = new Faker();
 		System.out.println(fa.animal().name());
@@ -54,12 +55,22 @@ public class Screenshots {
 		FileUtils.copyFile(f, new File("./screenshots/" + fa.funnyName().name() + ".png"));
 	}
 	
-	public void screenshot3(String name) throws IOException 
+	@Test
+	public void screenshot(String name) throws IOException 
 	{
 		// By using DataTypes we can manually assaign names for screenshots
 		TakesScreenshot tk = (TakesScreenshot) driver;
 		File f = tk.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(f, new File("./screenshots/" +name+ ".png"));	
+	}
+	
+	@Test
+	public void screenshot2(String filename) throws IOException 
+	{
+		TakesScreenshot tk = (TakesScreenshot) driver;
+		File Source = tk.getScreenshotAs(OutputType.FILE);
+		File Destination = new File("./screenshots/" +filename+ ".png");
+		FileUtils.copyFile(Source, Destination);
 	}
 
 	@AfterMethod
